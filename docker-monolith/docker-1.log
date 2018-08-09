@@ -1,0 +1,6 @@
+REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+aleshkashell/ubuntu-tmp-file   latest              3b93a9be4c8e        12 hours ago        115MB
+ubuntu                         16.04               7aa3602ab41e        4 days ago          115MB
+
+Образ - это неизменяемый слепок, на основе которого создаются контейнеры для запуска приложений.
+Из одного образа может быть поднято несколько контейнеров с разной конфигурацией.
