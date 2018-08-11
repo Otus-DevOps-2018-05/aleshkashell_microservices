@@ -47,7 +47,7 @@ resource "google_compute_instance" "docker" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt update",
-      "sudo apt install docker",
+      "sudo apt install -y docker",
       "sudo systemctl enable docker",
       "sudo systemctl start docker",
       "sudo docker run --name reddit -d -p 9292:9292 aleshkashell/otus-reddit:1.0"
