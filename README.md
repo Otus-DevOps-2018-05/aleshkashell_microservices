@@ -77,4 +77,4 @@ docker-compose up -d
 ```
 
 ## 3. Как проверить
-- ttp://'docker-host-ip':9292
+- http://'docker-host-ip':9292
