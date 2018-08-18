@@ -65,7 +65,7 @@ docker run -d --network=reddit -p 9292:9292 aleshkashell/ui:3.0
 - Docker-compose с помощью переменных окружения, значения которых вынесены в отдельный файл
 - Изменить базовое имя проекта можно при помощи переменной окружения COMPOSE_PROJECT_NAME или с помощью опции -p:
 ```
-docker-compse -p 'prefix' up -d
+docker-compose -p 'prefix' up -d
 ```
 - Создан docker-compose.override.yml, который позволяет
     - Изменять код каждого из приложений, не выполняя сборку образа
