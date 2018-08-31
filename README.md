@@ -6,6 +6,7 @@ aleshkashell microservices repository
 - [Docker 2](#docker-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=docker-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Docker 3](#docker-3) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=docker-3)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Docker 4](#docker-4) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=docker-4)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+- [Gitlab CI 1](#gitlab-ci-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=#gitlab-ci-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 
 # Docker 1
 
@@ -78,3 +79,24 @@ docker-compose up -d
 
 ## 3. Как проверить
 - http://'docker-host-ip':9292
+
+# Gitlab CI 1
+
+## 1. Что было сделано
+- Развернут Gitlab CI с помощью docker-compose
+- Создан проект в gitlab
+- Добавлен pipeline в репозиторий
+- Развернут и зарегистрирован runner
+- Добавлена конфигурация ansible для автоматического развертывания большого количества runner'ов
+- Добавлена интеграция со слак
+
+## 2. Как проверить
+- Сервис gitlab
+```
+http://35.233.90.26/
+```
+- Интеграция со слак
+```
+https://devops-team-otus.slack.com/messages/CB57RQQLA
+```
+
