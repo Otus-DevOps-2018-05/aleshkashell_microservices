@@ -1,0 +1,22 @@
+---
+  - name: Runners
+    hosts: all
+    become: true
+    gather_facts: False
+    become: yes
+    tasks:
+      - name: create container
+        docker_container:
+          name: gitlab-runner-{{ item }}
+          image: gitlab/gitlab-runner:latest
+          state: started
+          restart: yes
+          restart_policy: always
+          volumes:
+            - /srv/gitlab-runner/config:/etc/gitlab-runner
+            - /var/run/docker.sock:/var/run/docker.sock
+        with_sequence: count={{ count }}
+
+      - name: register runners
+        raw: docker exec -it gitlab-runner-{{ item }}  gitlab-runner register --non-interactive       --url "http://35.233.90.26/"       --registration-token "token"       --executor "docker"       --docker-image alpine:latest       --description "docker-runner"       --tag-list "linux,xenial,ubuntu,docker"       --run-untagged       --locked="false"
+        with_sequence: count={{ count }}
