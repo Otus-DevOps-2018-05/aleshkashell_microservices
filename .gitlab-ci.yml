@@ -31,13 +31,8 @@ branch review:
   stage: review
   script: echo "Deploy to $CI_ENVIRONMENT_SLUG"
   environment:
-<<<<<<< HEAD
     name: branch/$CI_COMMIT_REF_NAME
     url: http://$CI_ENVIRONMENT_SLUG.example.com
-=======
-  name: branch/$CI_COMMIT_REF_NAME
-  url: http://$CI_ENVIRONMENT_SLUG.example.com
->>>>>>> 813cd9c6d18d9254a1c6d1f0bd6ad4c81004e05c
   only:
     - branches
   except:
