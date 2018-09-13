@@ -29,7 +29,7 @@ test_integration_job:
 
 branch review:
   stage: review
-  image: docker:latest
+#  image: docker:latest
   when: manual
   script: 
     - echo "Deploy to $CI_ENVIRONMENT_SLUG"
@@ -73,7 +73,7 @@ branch review:
     - master 
 remove_branch review:
   stage: review
-  image: docker:latest
+#  image: docker:latest
   when: manual
   script: 
     # Install CA certs, openssl to https downloads, python for gcloud sdk
