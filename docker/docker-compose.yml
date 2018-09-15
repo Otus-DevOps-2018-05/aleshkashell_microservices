@@ -50,6 +50,19 @@ services:
       - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
     networks:
       - front_net
+  mongodb-exporter:
+    image: aleshkashell/mongodb-exporter
+    ports:
+      - 9216:9216
+    # You can provide custom params to the exporter, according to your mongodb config, like SSL support, ...
+    #command: -mongodb.tls -mongodb.tls-ca /etc/certs/mycert.crt -mongodb.tls-private-key /etc/certs/mycert.pem
+    environment:
+      - MONGODB_URL=mongodb://post_db
+      # You can provide HTTP Auth, according to your mongodb config
+    #  - HTTP_AUTH=<user>:<password>
+    networks:
+      - front_net
+      - back_net
 
 volumes:
   post_db:
