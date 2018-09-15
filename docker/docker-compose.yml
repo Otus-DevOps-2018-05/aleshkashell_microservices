@@ -51,7 +51,7 @@ services:
     networks:
       - front_net
   mongodb-exporter:
-    image: aleshkashell/mongodb-exporter
+    image: aleshkashell/mongodb-exporter:${MONGO_EXPORTER_VERSION}
     ports:
       - 9216:9216
     # You can provide custom params to the exporter, according to your mongodb config, like SSL support, ...
