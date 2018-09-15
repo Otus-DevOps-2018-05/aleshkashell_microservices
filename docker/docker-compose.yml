@@ -63,6 +63,11 @@ services:
     networks:
       - front_net
       - back_net
+  blackbox_exporter:
+    image: aleshkashell/blackbox_exporter:${BLACKBOX_EXPORTER_VERSION}
+    networks:
+      - front_net
+      - back_net
 
 volumes:
   post_db:
