@@ -26,7 +26,7 @@ scrape_configs:
   - job_name: 'mongo'
     static_configs:
       - targets:
-        - 'mongodb-exporter:9216'
+        - 'mongodb_exporter:9216'
   
   - job_name: 'blackbox-ui'
     metrics_path: /probe
