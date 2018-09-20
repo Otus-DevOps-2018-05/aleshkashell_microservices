@@ -68,6 +68,14 @@ services:
       - 3000:3000
     networks:
       - front_net
+  alertmanager:
+    image: ${USERNAME}/alertmanager
+    command:
+      - '--config.file=/etc/alertmanager/config.yml'
+    ports:
+      - 9093:9093
+    networks:
+      - front_net
 
 volumes:
   grafana_data:
