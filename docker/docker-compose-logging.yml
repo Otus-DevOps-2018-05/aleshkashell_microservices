@@ -22,3 +22,10 @@ services:
     image: openzipkin/zipkin
     ports:
       - "9411:9411"
+    networks:
+      - front_net
+      - back_net
+
+networks:
+  back_net: 
+  front_net: 
