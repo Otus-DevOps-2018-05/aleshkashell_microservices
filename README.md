@@ -12,7 +12,7 @@ aleshkashell microservices repository
 - [Monitoring 2](#monitoring-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=monitoring-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Logging 1](#logging-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=logging-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Kubernetes 1](#kubernetes-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
-
+- [Kubernetes 21](#kubernetes-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 
 # Docker 1
 
@@ -195,3 +195,24 @@ docker-compose -f docker-compose-monitoring.yml up -d
 
 ## 2. Как проверить
  - Наличие файлов в kubernetes/the_hard_way
+
+# Kubernetes 2
+
+## 1. Что сделано
+ - Развернуто локальное окружение kubernetes
+ - Сконфигурирован и произведен деплой приложения reddit
+ - Рассмотрена работа с сетью в kubernetes
+ - Расмотрены namespaces
+ - Рассмотрен dasboard kubernetes
+ - Развернут kubernetes в gke
+ - Развернуто приложение reddit в кластере gke
+
+## 2. Как запустить проект
+```
+ubectl apply -f ./kubernetes/reddit/
+```
+
+## 3. Как проверить
+```
+http://<ClusterIP>:<NodePort>
+
