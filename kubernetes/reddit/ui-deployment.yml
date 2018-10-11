@@ -22,3 +22,8 @@
         containers:
         - image: aleshkashell/ui
           name: ui
+          env:
+          - name: ENV
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
