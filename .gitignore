@@ -1,3 +1,4 @@
 run-container.sh
 .env
 *.del.yml
+*.tgz
