@@ -215,4 +215,4 @@ ubectl apply -f ./kubernetes/reddit/
 ## 3. Как проверить
 ```
 http://<ClusterIP>:<NodePort>
-
+```
