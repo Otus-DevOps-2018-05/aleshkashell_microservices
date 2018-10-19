@@ -12,7 +12,9 @@ aleshkashell microservices repository
 - [Monitoring 2](#monitoring-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=monitoring-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Logging 1](#logging-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=logging-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Kubernetes 1](#kubernetes-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
-- [Kubernetes 21](#kubernetes-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+- [Kubernetes 2](#kubernetes-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+- [Kubernetes 3](#kubernetes-3) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-3)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+- [Kubernetes 4](#kubernetes-4) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-4)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 
 # Docker 1
 
@@ -235,4 +237,16 @@ kubectl apply -f ./kubernetes/reddit/
 ## 3. Как проверить
 ```
 http://<ClusterIP>:<NodePort>
+```
+
+# Kubernetes 4
+
+## 1. Что было сделано
+ - Рассмотрена работа с helm
+ - Развернут gitlab в kubernetes
+ - Настроен CI/CD конвейер в Gitlab
+
+## 2. Как проверить
+```
+http://<ClusterIP>
 ```
