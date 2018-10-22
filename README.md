@@ -15,6 +15,7 @@ aleshkashell microservices repository
 - [Kubernetes 2](#kubernetes-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Kubernetes 3](#kubernetes-3) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-3)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Kubernetes 4](#kubernetes-4) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-4)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+- [Kubernetes 5](#kubernetes-5) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=kubernetes-5)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 
 # Docker 1
 
@@ -250,3 +251,11 @@ http://<ClusterIP>:<NodePort>
 ```
 http://<ClusterIP>
 ```
+
+# Kubernetes 5
+
+## 1. Что сделано
+ - Рассмотрена работа мониторинга в kubernetes с помощью prometheus
+ - Настроена визуализация с помощью Grafana (с использованием переменных)
+ - Рассмотрен стек логирования EFK
+
