@@ -8,7 +8,7 @@ aleshkashell microservices repository
 - [Docker 4](#docker-4) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=docker-4)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Gitlab CI 1](#gitlab-ci-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=#gitlab-ci-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Gitlab CI 2](#gitlab-ci-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=gitlab-ci-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
-
+- [Monitoring 1](#monitoring-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=monitoring-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 
 # Docker 1
 
@@ -120,5 +120,26 @@ git push gitlab2 gitlab-ci-2
 
 ## 3. Как проверить
  - Появится сервер в gcp для окружения
+
+# Monitoring 1
+
+## 1. Что было сделано
+ - Рассмотрена работа Prometheus
+ - Переупорядочена структура директорий
+ - Создан docker-образ prometheus
+ - Произведена сборка контейнеров скриптами
+ - Настроены healthchecks
+ - Рассмотрена работа node-exporter
+ - Добавлен мониторинг mongodb
+ - Добавлен мониторинг ui, post, comment с помощью blackbox_exporter
+ - Создан Makefile для сборки и заливки на docker hub образов
+
+## 2. Как запустить проект
+```
+cd docker; docker-compose up -d
+```
+
+## 3. Как проверить
+- http://'docker-host-ip':9090
 
 
