@@ -7,6 +7,8 @@ aleshkashell microservices repository
 - [Docker 3](#docker-3) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=docker-3)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Docker 4](#docker-4) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=docker-4)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Gitlab CI 1](#gitlab-ci-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=#gitlab-ci-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+- [Gitlab CI 2](#gitlab-ci-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=gitlab-ci-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+
 
 # Docker 1
 
@@ -99,4 +101,24 @@ http://35.233.90.26/
 ```
 https://devops-team-otus.slack.com/messages/CB57RQQLA
 ```
+
+# Gitlab CI 2
+
+## 1. Что было сделано
+ - Создан новый проект
+ - Добавлены окружения в pipeline
+ - Сделана возможность запускасть job кнопкой из интерфейса
+ - Добавлено теггирование
+ - Рассмотрены динамические окружения
+ - При пуше новой ветки создается сервер для окружения с возможностью удалить кнопкой из ui
+ - Добавлена сборка контейнера в шаге build
+
+## 2. Как запустить проект
+```
+git push gitlab2 gitlab-ci-2
+```
+
+## 3. Как проверить
+ - Появится сервер в gcp для окружения
+
 
