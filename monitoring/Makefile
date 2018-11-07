@@ -6,6 +6,7 @@ POST_PATH				?=$(ROOT_PATH)/src/post-py
 PROMETHEUS_PATH			?=$(ROOT_PATH)/monitoring/prometheus
 MONGODB_EXPORTER_PATH	?=$(ROOT_PATH)/monitoring/mongodb_exporter
 BLACKBOX_EXPORTER_PATH	?=$(ROOT_PATH)/monitoring/blackbox_exporter
+ALERTMANAGER_PATH		?=$(ROOT_PATH)/monitoring/alertmanager
 USER_NAME				?=aleshkashell
 UI_NAME					?=$(USER_NAME)/ui
 COMMENT_NAME			?=$(USER_NAME)/comment
@@ -13,6 +14,7 @@ POST_NAME				?=$(USER_NAME)/post
 PROMETHEUS_NAME			?=$(USER_NAME)/prometheus
 MONGODB_EXPORTER_NAME	?=$(USER_NAME)/mongodb_exporter
 BLACKBOX_EXPORTER_NAME	?=$(USER_NAME)/blackbox_exporter
+ALERTMANAGER_NAME		?=$(USER_NAME)/alertmanager
 
 
 all: build_all push_images
@@ -38,8 +40,10 @@ build_mongodb_exporter:
 	cd $(MONGODB_EXPORTER_PATH); docker build -t $(MONGODB_EXPORTER_NAME) .
 build_blackbox_exporter:
 	cd $(BLACKBOX_EXPORTER_PATH); docker build -t $(BLACKBOX_EXPORTER_NAME) .
-build_all: build_ui build_comment build_post build_prometheus build_mongodb_exporter build_blackbox_exporter
-push_all: push_ui push_post push_comment push_prometheus push_mongodb_exporter push_blackbox_exporter
+build_alertmanager:
+	cd $(ALERTMANAGER_PATH); docker build -t $(ALERTMANAGER_NAME) .
+build_all: build_ui build_comment build_post build_prometheus build_mongodb_exporter build_blackbox_exporter build_alertmanager
+push_all: push_ui push_post push_comment push_prometheus push_mongodb_exporter push_blackbox_exporter push_alertmanager
 push_ui:
 	docker push $(UI_NAME)
 push_post:
@@ -52,5 +56,8 @@ push_mongodb_exporter:
 	docker push $(MONGODB_EXPORTER_NAME)
 push_blackbox_exporter:
 	docker push $(BLACKBOX_EXPORTER_NAME)
+push_alertmanager:
+	docker push $(ALERTMANAGER_NAME)
 
-.PHONY: all build_ui build_comment build_post build_prometheus build_mongodb_exporter build_blackbox_exporter build_all push_all push_ui push_post push_comment push_prometheus push_mongodb_exporter push_blackbox_exporter
+.PHONY: all build_ui build_comment build_post build_prometheus build_mongodb_exporter build_blackbox_exporter build_all build_alertmanager \
+	push_all push_ui push_post push_comment push_prometheus push_mongodb_exporter push_blackbox_exporter push_alertmanager

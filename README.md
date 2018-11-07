@@ -9,6 +9,8 @@ aleshkashell microservices repository
 - [Gitlab CI 1](#gitlab-ci-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=#gitlab-ci-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Gitlab CI 2](#gitlab-ci-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=gitlab-ci-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Monitoring 1](#monitoring-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=monitoring-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+- [Monitoring 2](#monitoring-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=monitoring-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+
 
 # Docker 1
 
@@ -142,4 +144,22 @@ cd docker; docker-compose up -d
 ## 3. Как проверить
 - http://'docker-host-ip':9090
 
+# Monitoring 2
 
+## 1. Что сделано
+ - Реорганизованы файлы docker-compose
+ - Рассмотрена работа cAdvisor
+ - Рассмотрена работы Grafana и дашбордов
+ - Созданы дашборды с метриками приложения
+ - Настроена система алертинга
+ - Образы запушены в docker-hub
+
+## 2. Как запустить проект
+```
+docker-compose up -d
+docker-compose -f docker-compose-monitoring.yml up -d
+```
+
+## 3. Как проверить
+- http://'docker-host-ip':9090
+- Канал в слаке:  #aleksey_sheludchenkov
