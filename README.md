@@ -10,6 +10,7 @@ aleshkashell microservices repository
 - [Gitlab CI 2](#gitlab-ci-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=gitlab-ci-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Monitoring 1](#monitoring-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=monitoring-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 - [Monitoring 2](#monitoring-2) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=monitoring-2)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
+- [Logging 1](#logging-1) [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices.svg?branch=logging-1)](https://travis-ci.com/Otus-DevOps-2018-05/aleshkashell_microservices)
 
 
 # Docker 1
@@ -163,3 +164,25 @@ docker-compose -f docker-compose-monitoring.yml up -d
 ## 3. Как проверить
 - http://'docker-host-ip':9090
 - Канал в слаке:  #aleksey_sheludchenkov
+
+# Logging 1
+
+## 1. Что сделано
+ - Пересобраны образы приложения для сборки логов
+ - Рассмотрена работа логгирования на базе стека EFK
+ - Рассмотрен сбор структурированных
+ - Рассмотрена работы Kibana
+ - Рассмотрен сбор и парсинг неструктурированных логов в fluentd
+ - Добавлен дополнительный grok парсер для поля message в fluentd
+ - Рассмотрена работ zipkin
+
+## 2. Как запустить проект
+В папке docker:
+```
+docker-compose up -d
+docker-compose -f docker-compose-monitoring.yml up -d
+```
+## 3. Как проверить
+ - http://'docker-host-ip':5601 - Kibana
+ - http://'docker-host-ip':9411 - Zipkin
+
