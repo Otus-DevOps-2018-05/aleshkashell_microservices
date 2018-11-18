@@ -209,10 +209,30 @@ docker-compose -f docker-compose-monitoring.yml up -d
 
 ## 2. Как запустить проект
 ```
-ubectl apply -f ./kubernetes/reddit/
+kubectl apply -f ./kubernetes/reddit/
 ```
 
 ## 3. Как проверить
 ```
 http://<ClusterIP>:<NodePort>
+```
+# Kubernetes 3
 
+## 1. Что сделано
+ - Рассмотрена работа сервисов kubernetes
+ - Рассмотрена работа LoadBalancer
+ - Настроен Ingress
+ - Настроен TLS
+ - Созданы Network Policy при помощи плагина Calico
+ - Рассмотрена работа с хранилищами для кластера
+ - Подключен динамический Persistent Volume Claim (PVC)
+
+## 2. Как запустить проект
+```
+kubectl apply -f ./kubernetes/reddit/
+```
+
+## 3. Как проверить
+```
+http://<ClusterIP>:<NodePort>
+```
